@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="选择感兴趣的赛事"
+            android:textSize="24sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/tv_recommend_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="85dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:text="将为你推荐相关内容"/>
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/b3l" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:layout_margin="20dp"
+            android:layout_alignParentRight="true"
+            android:text="跳过"/>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="155dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:background="@drawable/bg_start_btn"
+            android:clickable="true"
+            android:text="开启" />
+
+        <!--<HorizontalScrollView-->
+        <!--android:id="@+id/scrollView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_recommend_content"
+            android:layout_above="@id/save">
+
+            <com.sheng.preferencefloatingview.floating.ContainerView
+                android:id="@+id/floatingView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true" />
+        </LinearLayout>
+        <!--</HorizontalScrollView>-->
+        <!--<com.sheng.preferencefloatingview.floating.SportCircleView-->
+            <!--android:id="@+id/ball_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_below="@id/tv_recommend_content"-->
+            <!--android:layout_above="@id/save"/>-->
+    </RelativeLayout>
+
+    <com.sheng.preferencefloatingview.floating.circle.splashdrawer.RotationSweepView
+        android:id="@+id/rotationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#ffffff" />
+</FrameLayout>
+
